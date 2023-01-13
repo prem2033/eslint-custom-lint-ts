@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint":"eslint ./src --ext .ts"
+    "lint": "eslint ./src --ext .ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint-plugin-custom-lint": "file:eslintRules",
     "typescript": "^4.9.4"
   },
   "devDependencies": {

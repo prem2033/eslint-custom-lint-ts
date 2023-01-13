@@ -12,5 +12,7 @@ parserOptions:
   sourceType: module
 plugins:
   - '@typescript-eslint'
+  - 'custom-lint'
 rules:
   no-console: off
+  custom-lint/method-deprecated: error
