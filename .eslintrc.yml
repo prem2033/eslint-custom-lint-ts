@@ -16,3 +16,14 @@ plugins:
 rules:
   no-console: off
   custom-lint/method-deprecated: error
+  custom-lint/class-declaration: error
+  custom-lint/class-method-declaration: error
+  custom-lint/function-declaration: error
+  custom-lint/enum-validation: error
+  custom-lint/vars-declaration: error
+  custom-lint/interface-validator: error
+  '@typescript-eslint/no-unused-vars': off
+  consistent-return: off
+  required-await: off
+  eqeqeq: error
+  no-unused-vars: off

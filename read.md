@@ -17,11 +17,20 @@ Note - to create custom plugin name of plugin look like [eslint-plugin-{pulgin_n
 References - https://dev.to/devsmitra/how-to-create-a-custom-eslint-plugin-3bom
 
 5. go back to your root folder of the project
+
 6. Add  dependency in package.json 
     
-    npm i file:packages/eslintrule -D
+        npm i file:packages/eslintrule -D
 
-7. Update .eslintric.js
+7. Update plugind and rules in .eslintric.js
+
+        plugins:
+            - 'custom-lint'
+        
+        rules:
+            - custom-lint/method-deprecated: error
+
+
 8. run eslint report
 
     ![eslit](./images/eslint.png)
