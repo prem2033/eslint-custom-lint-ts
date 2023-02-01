@@ -150,3 +150,28 @@ function containSubString(word, contain) {
 function isInterfaceValid(word) {
     return (!isFirstLetterCapital(word) || /^[I]/i.test(word));
 }
+
+module.exports.configs = {
+    customConfig1: {
+        rules: {
+            'custom-lint/method-deprecated': 'error',
+            'custom-lint/class-declaration': 'error',
+            'custom-lint/class-method-declaration': 'error',
+            'custom-lint/function-declaration': 'error',
+            'custom-lint/enum-validation': 'error',
+            'custom-lint/vars-declaration': 'error',
+            'custom-lint/interface-validator': 'error'
+        }
+    },
+    customConfig2: {
+        rules: {
+            'custom-lint/method-deprecated': 'error',
+            'custom-lint/class-declaration': 'error',
+            'custom-lint/class-method-declaration': 'error',
+            'custom-lint/function-declaration': 'error',
+            'custom-lint/enum-validation': 'error',
+            'custom-lint/vars-declaration': 'error',
+            'custom-lint/interface-validator': 'error'
+        }
+    }
+}

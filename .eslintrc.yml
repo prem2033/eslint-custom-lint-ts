@@ -27,3 +27,5 @@ rules:
   required-await: off
   eqeqeq: error
   no-unused-vars: off
+
+# to use as extend comment line 18-24 and add  `plugin:custom-lint/customConfig1` in 8 in extends tree
