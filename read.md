@@ -34,3 +34,42 @@ References - https://dev.to/devsmitra/how-to-create-a-custom-eslint-plugin-3bom
 8. run eslint report
 
     ![eslit](./images/eslint.png)
+
+
+How to write global eslint rule to use across your project
+
+Step1: Create you eslitn package such as [eslintRules](https://github.com/prem2033/eslint-custom-lint-ts/tree/master/eslintRules)
+
+Step 2: add below code in index.js to use it as extended plugin
+
+        module.exports.configs = {
+            customConfig1: {
+                rules: {
+                    'custom-lint/method-deprecated': 'error',
+                    'custom-lint/class-declaration': 'error',
+                    'custom-lint/class-method-declaration': 'error',
+                    'custom-lint/function-declaration': 'error',
+                    'custom-lint/enum-validation': 'error',
+                    'custom-lint/vars-declaration': 'error',
+                    'custom-lint/interface-validator': 'error'
+                }
+            }
+        }
+
+Step 3: Publish the plugin to npm / link it to local repo
+
+    to npm - npm publish
+    to local - npm link
+
+Step 4: now remove your custom rules from rules in .eslintrc.yml
+
+Step 5: install you plugin/ Link your plugin
+
+    npm install plugin_name
+    npm link plugin_name
+
+step 6:  add these thing to .eslintrc.yml
+
+        extends:
+            - plugin:custom-lint/customConfig1
+
